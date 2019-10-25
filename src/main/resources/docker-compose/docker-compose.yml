@@ -1,0 +1,21 @@
+version: '3'
+services:
+  ms-playlist:
+    container_name: ms_playlist
+    image: ms-playlist/ms-playlist
+    logging:
+      driver: "json-file"
+      options:
+        max-size: 500m
+    ports:
+      - "8088:8088"
+    environment:
+      - SERVER_PORT=8088 
+      - LOGGING_LEVEL=info
+      - OPENWATHER_API_KEY=b9dd2b170c010a3288f8e0eda6eb6284
+      - OPENWATHER_API_URL=https://api.openweathermap.org/data/2.5/weather
+      - SPOTIFY_APP_CLINET_ID=d3ed90f8eb9447deaa19a73d80df6f1a
+      - SPOTIFY_API_URL_ACCESS_TOKEN=https://accounts.spotify.com/api/token
+      - SPOTIFY_API_URL=https://api.spotify.com/v1/browse/categories/{category}
+      - SPOTIFY_APP_URL_PLAYLISTS=https://api.spotify.com/v1/browse/categories/{categoryId}/playlists
+    network_mode: "host"

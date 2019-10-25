@@ -1,8 +1,26 @@
+# Created by https://www.gitignore.io/api/java
+# Edit at https://www.gitignore.io/?templates=java
+
+### Java ###
 # Compiled class file
 *.class
+*target*
+*.versionBackup
+.project
+.classpath
+bin
+.settings
+
+**/.DS_Store
+**/*.versionBackup
+**/.project
+**/.classpath
+**/.bin
+**/.settings
 
 # Log file
-*.log
+**/*.log
+**/*.log.*
 
 # BlueJ files
 *.ctxt
@@ -21,3 +39,5 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# End of https://www.gitignore.io/api/java

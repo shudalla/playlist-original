@@ -1,0 +1,23 @@
+server:
+  port: 8002
+  servlet:
+    context-path: /playlist/v1
+
+spring:
+  devtools:
+    add-properties: true
+
+logging:
+  level:
+    root: info
+
+openWeather:
+  api-key: b9dd2b170c010a3288f8e0eda6eb6284
+  api-url: https://api.openweathermap.org/data/2.5/weather
+ 
+spotify:
+  app-client-id: d3ed90f8eb9447deaa19a73d80df6f1a
+  app-client-secret: 6f10ee3332ec49a9bceeff2e39e7765a
+  api-url-access-token: https://accounts.spotify.com/api/token
+  api-url: https://api.spotify.com/v1/browse/categories/{category}
+  api-url-playlists: https://api.spotify.com/v1/browse/categories/{categoryId}/playlists
